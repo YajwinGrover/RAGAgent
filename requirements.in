@@ -1,0 +1,19 @@
+# Edit this file to add dependencies, then run:
+# pip-compile requirements.in
+# pip install -r requirements.txt
+
+streamlit
+python-dotenv
+langchain-core
+langchain-groq
+langchain-community
+langchain-ollama
+langchain-chroma
+langchain-text-splitters
+langgraph
+nba_api
+requests
+beautifulsoup4
+pandas
+feedparser
+pypdf
