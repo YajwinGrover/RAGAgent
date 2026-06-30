@@ -16,4 +16,5 @@ requests
 beautifulsoup4
 pandas
 feedparser
+plotly
 pypdf

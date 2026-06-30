@@ -28,7 +28,7 @@ def _get_store():
 
 
 @tool
-def search_vector_db(query: str, num_results: int = 3) -> str:
+def search_vector_db(query: str, num_results: int | str = 3) -> str:
     """
     Search the NBA rulebook stored in ChromaDB using semantic similarity.
     Use this for any questions about NBA rules, fouls, violations, or regulations.
@@ -40,7 +40,7 @@ def search_vector_db(query: str, num_results: int = 3) -> str:
     Returns:
         Relevant rule text chunks from the NBA rulebook.
     """
-    num_results = max(1, min(5, num_results))
+    num_results = max(1, min(5, int(num_results)))
     try:
         store = _get_store()
         docs = store.similarity_search(query, k=num_results)
