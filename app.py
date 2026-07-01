@@ -139,7 +139,7 @@ with chat_tab:
                     exec(msg["viz_code"], namespace)
                     fig = namespace.get("fig")
                     if fig:
-                        st.plotly_chart(fig, use_container_width=True)
+                        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "staticPlot": True})
                 except Exception:
                     pass
 
@@ -229,7 +229,7 @@ with chat_tab:
                         exec(result["viz_code"], namespace)
                         fig = namespace.get("fig")
                         if fig:
-                            st.plotly_chart(fig, use_container_width=True)
+                            st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "staticPlot": True})
                     except Exception:
                         pass  # Viz failure never breaks the chat
 
